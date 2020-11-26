@@ -4,7 +4,7 @@
 			<router-link
 			active-class="active"
 			exact 
-			to="/"
+			to="index"
 			tag="li"
 			class="nav item nav-link"
 			>

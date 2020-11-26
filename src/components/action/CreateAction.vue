@@ -109,7 +109,7 @@ export default {
 				}else
 				{
 					//console.log(response);
-					this.$router.push('/');
+					this.$router.push('index');
 				}
 			})
 		},
