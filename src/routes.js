@@ -7,7 +7,7 @@ import EditAction from './components/action/EditAction';
 
 export const routes = [
 
-	{path: '/http://beknaji.com/demo/simple-accounting', component: Home, name: 'index' ,
+	{path: '/demo/simple-accounting', component: Home, name: 'index' ,
 	children: 
 	[
 		{path: '/action/create', component: CreateAction },
