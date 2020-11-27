@@ -7,14 +7,10 @@ import EditAction from './components/action/EditAction';
 
 export const routes = [
 
-	{path: '/demo/simple-accounting', component: Home, name: 'index' ,
-	children: 
-	[
-		{path: '/action/create', component: CreateAction },
-		{path: '/action/:id/edit', component: EditAction, name: 'editAction' },
-		{path: '/category', component: Category },
-		{path: '/category/:id/edit', component: CategoryEdit, name: 'editCategory' },
-		{path: '/category/create', component: CategoryCreate, name: 'createCategory' },
-	] },
-	
+	{path: '/', component: Home },
+	{path: '/action/create', component: CreateAction },
+	{path: '/action/:id/edit', component: EditAction, name: 'editAction' },
+	{path: '/category', component: Category },
+	{path: '/category/:id/edit', component: CategoryEdit, name: 'editCategory' },
+	{path: '/category/create', component: CategoryCreate, name: 'createCategory' },
 ]

@@ -3,20 +3,20 @@
 
 <div class="card col-md-8">
   <div class="card-body">
-    <h3>Страница действий</h3><hr>
-    <button @click="createNewAction" class="btn btn-primary">Создать действие</button>
+    <h3>Action Page</h3><hr>
+    <button @click="createNewAction" class="btn btn-primary">Creat New Action</button>
 			<hr>
 			<table v-if="actions != null" class="table table-bordered table-responsive">
 				<thead>
 					<tr>
 						<td>#</td>
-						<td>Тип</td>
-						<td>Категория</td>
-						<td>Комментарий</td>
-						<td>Сумма</td>
-						<td>Дата</td>
+						<td>Type</td>
+						<td>Category</td>
+						<td>Comment</td>
+						<td>Sum</td>
+						<td>Date</td>
 						<td>
-							# # #
+							#Actions
 						</td>
 					</tr>
 				</thead>
@@ -42,33 +42,33 @@
 							:to="{ name:'editAction', params:{id: item.id } }"
 							class="btn btn-warning"
 							>
-							Редактировать
+							Edit
 							</router-link>
-							<button :disabled="isDisabled"  @click="deleteAction(item.id)" class="btn btn-danger"><span v-if="isDisabled" class="spinner-grow spinner-grow-sm"></span>Удалять</button>
+							<button :disabled="isDisabled"  @click="deleteAction(item.id)" class="btn btn-danger"><span v-if="isDisabled" class="spinner-grow spinner-grow-sm"></span>Delete</button>
 						</td>
 					</tr>
 				</tbody>
 			</table>
-			<center v-if="actions == null" ><br><div class="spinner-grow spinner-grow-sm"></div><br>Загружается ...</center>
+			<center v-if="actions == null" ><br><div class="spinner-grow spinner-grow-sm"></div><br>Loading...</center>
   </div>
 </div>
 
 <div class="col-md-4">
 <div class="card">
 	<div class="card-body">
-		<h3>Доход / Расход</h3><hr>
+		<h3>Income/Expense</h3><hr>
 		<div v-if="total != null">
 			<div class="form-group">
-				<label><b>Общие расходы</b></label>
+				<label><b>Total Expense</b></label>
 			<input v-model="total.cost"  v-money="money" class="form-control" type="text" name="" disabled>
 			</div>
 			<div class="form-group">
-				<label><b>Суммарный доход</b></label>
+				<label><b>Total Income</b></label>
 			<input v-model="total.gain"  v-money="money" class="form-control" type="text" name="" disabled>
 			</div>
 			<span></span>
 		</div>
-		<center v-if="total == null" ><br><div class="spinner-grow spinner-grow-sm"></div><br>Загружается ...</center>
+		<center v-if="total == null" ><br><div class="spinner-grow spinner-grow-sm"></div><br>Loading...</center>
 	</div>
 </div>
 </div>

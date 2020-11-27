@@ -10,10 +10,12 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
     "luxon": "^1.25.0",
     "v-mask": "^2.2.3",
     "v-money": "^0.8.1",
     "vue": "^2.5.11",
+    "vue-chartjs": "^3.5.1",
     "vue-datetime": "^1.0.0-beta.14",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.4.9",

@@ -4,11 +4,11 @@
 			<router-link
 			active-class="active"
 			exact 
-			to="index"
+			to="/"
 			tag="li"
 			class="nav item nav-link"
 			>
-			<a>Действие</a>	
+			<a>Home</a>	
 			</router-link>
 
 			<router-link
@@ -18,7 +18,7 @@
 			class="nav item nav-link"
 			tag="li"
 			>
-			<a>Категория</a>
+			<a>Category</a>
 			</router-link>
 			
 		</ul>

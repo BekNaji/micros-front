@@ -2,17 +2,17 @@
 <div>
 	<div class="card">
 		<div class="card-body">
-			<h3>Страница категории</h3><hr>
+			<h3>Category Page</h3><hr>
 			
-			<button @click="createCategory" class="btn btn-primary">Создать категорию</button>
+			<button @click="createCategory" class="btn btn-primary">Creat Category</button>
 			<hr>
 			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<td>#</td>
-						<td>Тип</td>
-						<td>Название</td>
-						<td># # #</td>
+						<td>Type</td>
+						<td>Name</td>
+						<td>#Actions</td>
 					</tr>
 				</thead>
 				<tbody v-if="category">
@@ -30,15 +30,15 @@
 							:to="{ name:'editCategory', params:{id: item.id } }"
 							class="btn btn-warning"
 							>
-							Редактировать
+							Edit
 							</router-link>
 							<button :disabled="isDisabled"   @click="deleteCategory(item.id)" class="btn btn-danger">
-								<span v-if="isDisabled" class="spinner-grow spinner-grow-sm"></span>Удалять</button>
+								<span v-if="isDisabled" class="spinner-grow spinner-grow-sm"></span>Delete</button>
 						</td>
 					</tr>
 				</tbody>
 			</table>
-			<center v-if="!category" ><br><div class="spinner-grow spinner-grow-sm"></div><br>Загружается ...</center>
+			<center v-if="!category" ><br><div class="spinner-grow spinner-grow-sm"></div><br>Loading...</center>
 		</div>
 	</div>
 </div>

@@ -2,25 +2,25 @@
 <div class="row">
 	<div class="card col-md-6 offset-3">
 		<div class="card-body">
-			<h3>Изменить действие</h3><hr>
+			<h3>Create New Action</h3><hr>
 			<form v-if="action != ''">
 			<div class="form-group">
-				<label>Дата</label>
+				<label>Date</label>
 				<input  v-model="action.dateNow" class="form-control" type="datetime-local" required>
 				<p class="text-danger" v-if="errors.dateNow != ''">{{ errors.dateNow }}</p>
 
 				<!-- <input :max="dateNow" v-model="dateNow" class="form-control" type="datetime-local"> -->
 			</div>
 			<div class="form-group">
-				<label>Тип</label>
+				<label>Type</label>
 				<select v-model="action.type" class="form-control" required>
-					<option value="gain">Доход</option>
-					<option value="cost">Расход</option>
+					<option value="gain">Income</option>
+					<option value="cost">Expense</option>
 				</select>
 				<p class="text-danger" v-if="errors.type != ''">{{ errors.type }}</p>
 			</div>
 			<div class="form-group">
-				<label>Категория</label>
+				<label>Category</label>
 				<select v-model="action.category" class="form-control" required>
 					<option selected disabled>Select Category</option>
 
@@ -39,19 +39,19 @@
 				<p class="text-danger" v-if="errors.category != ''">{{ errors.category }}</p>
 			</div>
 			<div class="form-group">
-				<label>Сумма</label>
+				<label>Sum</label>
 				<input class="form-control" v-money="money" v-model="action.sum" type="text" name="" required>
 				<p class="text-danger" v-if="errors.sum != ''">{{ errors.sum }}</p>
 			</div>
 			<div class="form-group">
-				<label>Комментарий</label>
-				<textarea v-model="action.comment"  placeholder="Написать комментарий" rows="5" class="form-control" required></textarea>
+				<label>Comment</label>
+				<textarea v-model="action.comment"  placeholder="Your Comment" rows="5" class="form-control" required></textarea>
 				<p class="text-danger" v-if="errors.comment != ''">{{ errors.comment }}</p>
 			</div>
 			<button :disabled="isDisabled" @click.prevent="update" class="btn btn-primary">
-			<span v-if="isDisabled" class="spinner-grow spinner-grow-sm"></span>Обновить</button>
+			<span v-if="isDisabled" class="spinner-grow spinner-grow-sm"></span>Update</button>
 		</form>
-		<center v-if="action == ''" ><br><div class="spinner-border"></div><br>Загружается...</center>
+		<center v-if="action == ''" ><br><div class="spinner-border"></div><br>Loading...</center>
 		</div>
 	</div>
 
@@ -112,7 +112,7 @@ export default {
 				}else
 				{
 					//console.log(response.data);
-					this.$router.push('index');
+					this.$router.push('/');
 				}
 			})
 		},
