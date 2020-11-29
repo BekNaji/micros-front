@@ -23,7 +23,7 @@ Vue.use(VueResource);
 
 
 //http://beknaji.com/demo/micros/backend/
-//Vue.http.options.root = 'http://micros.test/api';
+ // Vue.http.options.root = 'http://micros.test/api';
 Vue.http.options.root = 'https://beknaji.com/demo/micros/backend/api';
 
 

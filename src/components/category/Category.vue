@@ -1,10 +1,12 @@
 <template>
 <div>
-	<div class="card">
+	<div class="card col-sm-8 offset-sm-2">
 		<div class="card-body">
 			<h3>Category Page</h3><hr>
 			
 			<button @click="createCategory" class="btn btn-primary">Creat Category</button>
+			<br><br>
+			<p ><b class="text-danger" >Important! :</b> If you delete the category, its <b>Action Data</b> will be deleted as well.</p>
 			<hr>
 			<table class="table table-bordered">
 				<thead>

@@ -52,7 +52,6 @@ export default {
 				if(response.data.errors)
 				{
 					this.isDisabled = false;
-					//console.log(response.data.errors);
 					this.errors = response.data.errors;
 				}else{
 					this.$router.push('/category');
