@@ -5,9 +5,11 @@
   <div class="card-body">
     <h3>Action Page</h3><hr>
    
-    	<button @click="createNewAction" class="btn btn-primary">Creat New Action</button>
+    	<button @click="createNewAction" class="btn btn-primary"> 
+    		<i class="fa fa-plus" aria-hidden="true"></i> Creat Action </button>
 	    <button v-show="!filterForm" @click="showFilter()" class="btn btn-info">
 			Show Filter
+			<i class="fa fa-filter" aria-hidden="true"></i>
 		</button>
     	<hr>
     <div v-show="filterForm" >
@@ -42,7 +44,8 @@
     	<div class="form-group col-sm-12">
     		<button @click="runFilter()" class="btn btn-primary">
     			<span v-if="filter.isDisabled" class="spinner-grow spinner-grow-sm"></span>
-    		Filter</button>
+    			Ok
+    		</button>
 
     		<button  @click="clearForm()" class="btn btn-info">
     		Close & Clear</button>
@@ -56,12 +59,12 @@
 			<table v-if="actions != null" class="table table-bordered ">
 				<thead>
 					<tr>
-						<td>#</td>
-						<td>Type</td>
-						<td>Category</td>
-						<td>Comment</td>
-						<td>Sum</td>
-						<td>Date</td>
+						<td >#</td>
+						<td >Type</td>
+						<td >Category</td>
+						<td >Comment</td>
+						<td >Sum</td>
+						<td >Date</td>
 						<td>
 							#Actions
 						</td>
@@ -89,9 +92,12 @@
 							:to="{ name:'editAction', params:{id: item.id } }"
 							class="btn btn-warning"
 							>
-							Edit
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 							</router-link>
-							<button :disabled="isDisabled"  @click="deleteAction(item.id)" class="btn btn-danger"><span v-if="isDisabled" class="spinner-grow spinner-grow-sm"></span>Delete</button>
+							<button :disabled="isDisabled"  @click="deleteAction(item.id)" class="btn btn-danger">
+								<span v-if="isDisabled" class="spinner-grow spinner-grow-sm"></span>
+								<i class="fa fa-trash-o" aria-hidden="true"></i>
+							</button>
 						</td>
 					</tr>
 				</tbody>
@@ -231,8 +237,11 @@ export default {
 }
 </script>
 <style scoped>
-	.total {
-		background-color: white;
-		font-size: 30px;
-	}
+.total {
+	background-color: white;
+	font-size: 30px;
+}
+thead{
+	cursor:pointer;
+}
 </style>
